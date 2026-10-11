@@ -10,3 +10,5 @@ exports/
 *.log
 node_modules/
 .venv/
+.tmp.drivedownload/
+.tmp.driveupload/
