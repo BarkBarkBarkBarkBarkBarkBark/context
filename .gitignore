@@ -1,0 +1,12 @@
+locations.yaml
+.DS_Store
+.env
+.env.*
+data/
+recordings/
+exports/
+*.local.*
+*.tmp
+*.log
+node_modules/
+.venv/

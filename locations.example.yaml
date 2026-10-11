@@ -1,0 +1,11 @@
+version: 1
+locations:
+  agent-context: /absolute/path/to/agent_context
+  realtime-sorting: /absolute/path/to/realtime_sorting
+  realtime-sorter-mvp: /absolute/path/to/realtime_sorting/realtime-sorter-mvp
+  synth-mvp: /absolute/path/to/realtime_sorting/synth-mvp
+  spike-stream: /absolute/path/to/realtime_sorting/spike_stream
+  zlab-sorting: /absolute/path/to/realtime_sorting/zlab_sorting_script
+  adaptive-screening: /absolute/path/to/realtime_sorting/AdaptiveScreening_v1.1
+  semantic-stream: /absolute/path/to/semantic_tuning
+  toolbox: /absolute/path/to/toolbox

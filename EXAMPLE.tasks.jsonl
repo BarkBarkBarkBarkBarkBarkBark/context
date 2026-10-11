@@ -1,0 +1,2 @@
+{"id":"example-project:confirm-state","title":"Confirm the latest source state and next milestone","status":"todo","priority":"now","depends_on":[],"acceptance":"A verified checkpoint names the source, evidence, and one executable next action.","evidence":[]}
+{"id":"example-project:first-deliverable","title":"Deliver the first reviewable outcome","status":"todo","priority":"next","depends_on":["example-project:confirm-state"],"acceptance":"Replace this with a concrete behavior or artifact and its validation check.","evidence":[]}

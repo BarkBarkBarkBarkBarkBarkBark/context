@@ -1,0 +1,68 @@
+version: 1
+projects:
+  - id: agent-context
+    name: Agent Context
+    description: Cross-project context, tasks, decisions, and handoffs.
+    status: active
+    parent: null
+    links: []
+  - id: realtime-sorting
+    name: Real-Time Sorting
+    description: Umbrella for neural streaming and sorting experiments.
+    status: unverified
+    parent: null
+    links:
+      - type: related_to
+        target: semantic-stream
+        reason: Neural streaming domain overlap; integration is not verified.
+  - id: realtime-sorter-mvp
+    name: Realtime Sorter MVP
+    description: Kafka/Flink buffering and reordering with NumPy detection.
+    status: unverified
+    parent: realtime-sorting
+    links: []
+  - id: synth-mvp
+    name: Synthetic Streaming MVP
+    description: WebSocket synthetic source, relay, and Streamlit viewer.
+    status: unverified
+    parent: realtime-sorting
+    links:
+      - type: related_to
+        target: semantic-stream
+        reason: Synthetic signal visualization reference, not an established dependency.
+  - id: spike-stream
+    name: Spike Stream
+    description: Streaming experiment files with an undocumented current purpose.
+    status: unverified
+    parent: realtime-sorting
+    links: []
+  - id: zlab-sorting
+    name: Zlab Sorting
+    description: Intan to curated SpikeInterface analyzer with Kilosort4 and AWS.
+    status: unverified
+    parent: realtime-sorting
+    links:
+      - type: related_to
+        target: semantic-stream
+        reason: Future ground-truth comparison may reuse sorting knowledge; not required for simulator MVP.
+  - id: adaptive-screening
+    name: Adaptive Screening
+    description: AdaptiveScreening C++ source collection; purpose needs confirmation.
+    status: unverified
+    parent: realtime-sorting
+    links: []
+  - id: semantic-stream
+    name: Semantic Neural Stream
+    description: Semantic population simulator, TCP measurement, web view, and adaptive text presentation.
+    status: active
+    parent: null
+    links:
+      - type: uses
+        target: toolbox
+        reason: Canonical marco-neural-tools TCP framing and client package installed editably.
+  - id: toolbox
+    name: Toolbox
+    description: Small shared neural-stream protocol and TCP client package.
+    status: active
+    parent: null
+    links: []

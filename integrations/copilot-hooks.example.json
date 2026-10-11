@@ -1,0 +1,11 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "type": "command",
+        "command": "ruby \"/ABSOLUTE/PATH/TO/agent_context/scripts/checkpoint_stop.rb\"",
+        "timeout": 10
+      }
+    ]
+  }
+}

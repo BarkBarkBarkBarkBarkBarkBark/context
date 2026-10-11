@@ -1,0 +1,1 @@
+{"id":"realtime-sorting:confirm-portfolio","title":"Confirm active children and the next deliverable","status":"todo","priority":"next","depends_on":[],"acceptance":"Owner confirms active, paused, or archived project statuses and one next deliverable; state records the evidence.","evidence":[]}

@@ -1,0 +1,1 @@
+{"id":"zlab-sorting:recover-stage","title":"Recover the active sorting and curation stage","status":"todo","priority":"later","depends_on":[],"acceptance":"State records a non-sensitive artifact alias, confirmed stage/environment, and next quality check; no patient data or credentials are stored.","evidence":[]}
