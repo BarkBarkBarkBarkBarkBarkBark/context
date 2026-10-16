@@ -17,6 +17,7 @@ Descriptions below are a readable index, not a second status board.
 | `synth-mvp` | Synthetic WebSocket signal producer, relay, and Streamlit viewer. | [State](projects/synth-mvp/state.md) |
 | `spike-stream` | Spike-stream experiment files; purpose and current milestone need confirmation. | [State](projects/spike-stream/state.md) |
 | `zlab-sorting` | Intan recordings to curated SpikeInterface analyzers using Kilosort4 and AWS. | [State](projects/zlab-sorting/state.md) |
+| `dhn-validation` | Paired CSC/MED oSort comparison, immutable baseline, and independent MATLAB curation. | [State](projects/dhn-validation/state.md) |
 | `adaptive-screening` | AdaptiveScreening C++ source collection; purpose and provenance need confirmation. | [State](projects/adaptive-screening/state.md) |
 | `semantic-stream` | Semantic population simulator, raw TCP measurement, web observer, and adaptive text presentation. | [State](projects/semantic-stream/state.md) |
 | `toolbox` | Canonical shared neural sample wire contract and TCP client package. | [State](projects/toolbox/state.md) |

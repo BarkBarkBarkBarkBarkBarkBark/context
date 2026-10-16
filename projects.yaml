@@ -51,6 +51,15 @@ projects:
       - type: related_to
         target: semantic-stream
         reason: Future ground-truth comparison may reuse sorting knowledge; not required for simulator MVP.
+  - id: dhn-validation
+    name: DHN Validation
+    description: Paired CSC and MED oSort fidelity comparison with independent manual curation.
+    status: active
+    parent: null
+    links:
+      - type: related_to
+        target: zlab-sorting
+        reason: The runbook uses the sorting checkout's Python environment; no Kilosort or AWS workflow dependency is established.
   - id: adaptive-screening
     name: Adaptive Screening
     description: AdaptiveScreening C++ source collection; purpose needs confirmation.

@@ -6,6 +6,7 @@ locations:
   synth-mvp: /absolute/path/to/realtime_sorting/synth-mvp
   spike-stream: /absolute/path/to/realtime_sorting/spike_stream
   zlab-sorting: /absolute/path/to/realtime_sorting/zlab_sorting_script
+  dhn-validation: /absolute/path/to/DHN_Validation
   adaptive-screening: /absolute/path/to/realtime_sorting/AdaptiveScreening_v1.1
   semantic-stream: /absolute/path/to/semantic_tuning
   toolbox: /absolute/path/to/toolbox
