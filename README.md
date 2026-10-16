@@ -11,6 +11,7 @@ Descriptions below are a readable index, not a second status board.
 | ID | Description | Resume |
 | --- | --- | --- |
 | `agent-context` | This shared context hub and its maintenance workflow. | [State](projects/agent-context/state.md) |
+| `hosaka-context` | Canonical Hosaka runtime, installers, Pi operations, and the isolated hosted terminal across three source repositories. | [State](projects/hosaka-context/state.md) |
 | `realtime-sorting` | Umbrella for the neural recording and sorting experiments in the current workspace. | [State](projects/realtime-sorting/state.md) |
 | `realtime-sorter-mvp` | Kafka/Flink buffering and NumPy spike-detection pipeline, per its README. | [State](projects/realtime-sorter-mvp/state.md) |
 | `synth-mvp` | Synthetic WebSocket signal producer, relay, and Streamlit viewer. | [State](projects/synth-mvp/state.md) |

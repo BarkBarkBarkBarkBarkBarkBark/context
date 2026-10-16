@@ -1,5 +1,11 @@
 version: 1
 projects:
+  - id: hosaka-context
+    name: Hosaka
+    description: Terminal-first appliance, source and Docker distribution, and isolated hosted terminal.
+    status: active
+    parent: null
+    links: []
   - id: agent-context
     name: Agent Context
     description: Cross-project context, tasks, decisions, and handoffs.
