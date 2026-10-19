@@ -42,3 +42,41 @@
 - Revisit when: Cost, concurrency, persistent-workspace or provider needs change;
   revisiting requires isolation and operational evidence, not just UI changes.
 - Supersedes: hosaka-context:D003.
+
+## hosaka-context:D005 | 2026-10-18 | Accepted
+
+- Decision: Reconcile the new extension roadmap with the committed native
+  foundation. Use strict `extension.yaml`/API v1, independent packages and data,
+  declarative host-owned UI metadata and non-importing discovery.
+- Why: New operator-supplied plan extends the earlier command-only proposal;
+  there is no implemented `plugin.yaml` runtime to preserve.
+- Delivery: First authoring/registration/bootstrap with disabled, ungranted
+  packages and real standalone examples; then bounded supervised execution,
+  permission/platform policy, authenticated generic surfaces and external proof.
+- Boundary: No dynamic package imports into core; a subprocess/test fixture is
+  not a sandbox. Planned UI/execution must not be described as implemented.
+  The Python TUI + Menu remains canonical; Neurodeck extraction is separate.
+- Revisit when: Explicitly approved platform/API compatibility change or revised
+  user direction. No implicit provider migration is authorized.
+- Supersedes: the market brief's unimplemented `plugin.yaml` filename proposal,
+  not any delivered hosted isolation or TUI decision.
+
+## hosaka-context:D006 | 2026-10-18 | Accepted
+
+- Decision: Implement execution and declarative Menu views together. The operator
+  explicitly selected trusted-local approval now, with protected Linux execution
+  later, rather than requiring an OS sandbox before any invocation.
+- Policy: Individual source-digest approval, separate storage grant and
+  enablement; new installs remain disabled/unapproved. Refuse root/public
+  execution. No API endpoint can approve or enable packages. Do not silently
+  approve native user packages during implementation.
+- Boundary: Approved code retains user privileges, including host-file/network/
+  subprocess access outside the context. Environment sanitation and bounded
+  workers are not OS containment. Dedicated agent tools, dependency environments
+  and full external/device qualification remain separate gates.
+- UX: One generic authenticated API and host-owned declarative renderer;
+  preserve the canonical terminal across Menu operations. The operator separately
+  approved restarting the older local backend and accepted its TUI disconnect.
+- Revisit when: Marketed Linux release/hosted packaging or untrusted-package
+  execution requires enforceable isolation. D004 hosted boundaries stay intact.
+- Supersedes: no deployed isolation guarantee; refines the staged D005 roadmap.

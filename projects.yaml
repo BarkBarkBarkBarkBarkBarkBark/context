@@ -12,6 +12,33 @@ projects:
     status: active
     parent: null
     links: []
+  - id: resumes-and-letters
+    name: Resumes and Letters
+    description: Neuroengineering job search with evidence-backed skills, project examples, and targeted applications.
+    status: active
+    parent: null
+    links:
+      - type: related_to
+        target: zlab-sorting
+        reason: Potential neural-processing portfolio evidence; personal contributions and claims require review.
+      - type: related_to
+        target: dhn-validation
+        reason: Potential acquisition-format validation evidence, not a required application dependency.
+      - type: related_to
+        target: semantic-stream
+        reason: Potential simulation and streaming evidence; do not equate it with other semantic project records without source review.
+      - type: related_to
+        target: toolbox
+        reason: Source-reviewed local protocol, package and test-fixture evidence; no public repository established.
+      - type: related_to
+        target: realtime-sorter-mvp
+        reason: Source-reviewed streaming filter and threshold-detector portfolio evidence, without runtime guarantees.
+      - type: related_to
+        target: synth-mvp
+        reason: Source-reviewed synthetic WebSocket and Streamlit visualization portfolio evidence.
+      - type: related_to
+        target: hosaka-context
+        reason: Source-reviewed container and CI delivery evidence relevant to scientific software roles.
   - id: realtime-sorting
     name: Real-Time Sorting
     description: Umbrella for neural streaming and sorting experiments.

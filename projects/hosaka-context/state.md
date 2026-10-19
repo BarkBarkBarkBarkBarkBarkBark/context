@@ -1,10 +1,55 @@
 # Hosaka: Current State
 
-Last checkpoint: 2026-10-10T20:41:20-07:00
-Verification: delivered hosted milestone verified in this session; follow-up gaps below
-Current milestone: real access-code-gated Hosaka TUI deployed on Fly and embedded on the public site
+Last checkpoint: 2026-10-18
+Verification: 379 focused tests, real worker/API/browser checks and approved local backend restart; no hardware/public deployment claim
+Current milestone: trusted-local extension execution and declarative Menu views implemented locally
 
-## Known State
+## Current Native Extension Work
+
+- The former uncommitted foundation is now committed as `5f254629` on `dev`:
+  shared native paths, installation records, path/offline diagnostics, read-only
+  ownership inventory and preserved TUI + Menu boot/update behavior.
+- Reconciled the newly supplied `docs/extension_plan.md` with the actual code.
+  `extension.yaml` supersedes the older unimplemented `plugin.yaml` proposal.
+  The scientific-workstation/Neurodeck charter remains separate.
+- Authoring is committed at `0baf7a99`, tracked in `BarkBarkBarkBarkBarkBarkBark/Hosaka#32`.
+  Implementation adds strict manifest/action-schema/UI validation, no-import
+  discovery, registration/lifecycle metadata, standalone reference source/tests,
+  shared installer bootstrap, CLI/TUI routes and agent documentation.
+- #33 adds bounded versioned JSON workers, input/output validation, scoped
+  data/log methods, safe mode/cancellation, digest approval and separate grants.
+  CLI/TUI and a guarded generic API use the same runner; the native Menu renders
+  forms/results/errors/tables without per-package core edits or terminal remount.
+- The operator explicitly accepted trusted-local mode, NOT an OS sandbox.
+  Root/public execution is refused; arbitrary approved Python retains user
+  privileges and can bypass advisory filesystem/network/process policy.
+  New packages remain disabled/unapproved. Dedicated agent tools, enforced Linux
+  containment, dependency environments and archive upgrades remain pending.
+- Current validation: 379 focused Python tests passed, including real TUI
+  dispatch, process failures/limits/cancellation and exact data/log/concurrency
+  bounds. Source/Bash/PowerShell client checks, frontend build, strict live
+  OpenAPI/catalog coverage, rebuilt Docker/live persistence integration and
+  Linux UID-65534 worker execution passed. PowerShell ran on Linux.
+  Safety-control regression proves disable cancels even if package YAML breaks.
+- Browser proof used disposable fixtures: echo/save/load, escaped markup,
+  all initial input types, controlled errors, table output, live cancellation,
+  second-package discovery/execution without a frontend rebuild/core edit and
+  removal of disabled navigation. The same terminal DOM survived Menu use.
+- Native reference is now initialized in the resolved extensions directory,
+  disabled with no grants; native extension doctor passed. Existing installation,
+  provider and upstream PicoClaw configuration bytes/modes were unchanged.
+- After explicit approval of TUI disconnect, restarted the local backend on
+  loopback port 8421; health and extension API returned 200. Verified the new
+  Menu in a fresh native browser tab (the old shared tab was hidden/frozen).
+  Native packages remain disabled/unapproved; no native package grant was made.
+- #33 changes and context updates remain local/uncommitted. No public deployment,
+  hardware boot or native Windows qualification was performed. The previous
+  authoring-only checkpoint's "uncommitted" statement is superseded by `0baf7a99`.
+- No provider import or upstream PicoClaw reconfiguration is part of this slice.
+  Native `.hosaka` and standalone `.picoclaw` remain separate until explicit
+  owner-approved migration.
+
+## Prior Hosted State (2026-10-10 evidence, not reverified on 2026-10-18)
 
 - Canonical main commit `d24fdbbb`; wrapper `abef893`; marketing `fbf52e8`.
   Local commit anchors were rechecked during this documentation checkpoint.
@@ -26,11 +71,11 @@ Current milestone: real access-code-gated Hosaka TUI deployed on Fly and embedde
 
 ## Last Meaningful Action And Validation
 
-This checkpoint registers the existing project and splits context into the hub's
+The 2026-10-10 checkpoint registered the existing project and split context into the hub's
 brief/state/tasks/updates/decisions records. The old underscore folder is normalized
 to the registry-required `hosaka-context`; detailed technical notes are preserved.
 
-Previously executed in this session (not rerun for this documentation update):
+Previously executed on 2026-10-10 (not rerun for current extension work):
 
 - Eight hosted gateway regressions passed: origin/auth, quota/body size, fixed
   model forwarding, credential-free worker config, cleanup/retry and capacity.
@@ -65,6 +110,18 @@ Documentation validation result is recorded in [updates.md](updates.md).
 
 ## Next Action
 
+Next build the independent Halloween citation package using the published guide
+and `hosaka extensions create halloween-citations --path PATH`. Implement reason
+inputs/templates, explicit local timezone and JSON/text receipts through its data
+context; validate and test without editing core. Ask the owner to inspect/approve
+its digest/storage grant and enable it, then check CLI/TUI/Menu output and
+unchanged core git status. Keep printing optional/unimplemented until a real
+core capability exists. Dedicated PicoClaw tools and enforced Linux isolation
+have separate tasks; do not claim them from trusted-local proof.
+Do not automatically migrate credentials or run untrusted package tests.
+
+Keep the independent operational follow-ups below:
+
 Before 2026-11-10, use the wrapper's README to securely rotate the app-scoped
 `hosaka-terminal-workers` deploy token into gateway secret `HOSAKA_FLY_API_TOKEN`.
 Never print/store it in hub records. Deploy gateway, verify public `/healthz`,
@@ -78,6 +135,10 @@ repeating an existing configured-machine build.
 ## Reopen
 
 - [Tasks](tasks.jsonl) and [decisions](decisions.md).
+- Canonical `AGENTS.md`, `docs/extension_plan.md`,
+  `docs/extensions/AGENT_GUIDE.md`, `hosaka/extensions/`, `tests/extensions/`,
+  `examples/extensions/reference-extension/`, `hosaka/web/extensions_api.py`,
+  `frontend/src/extensions/ExtensionMenu.tsx` and issues 32/33.
 - Wrapper `README.md`, `fly.toml`, `agent-server/hosted_terminal.py`.
 - Canonical `install/README.md`, `install.sh`, `.github/workflows/image.yml`.
 - [Detailed handoff](2026-10-terminal-and-picoclaw-handoff.md) for Pi/source/provider specifics.

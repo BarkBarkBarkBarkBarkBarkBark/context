@@ -2,6 +2,17 @@
 
 Updated: 2026-10-10T20:41:20-07:00 (structured context checkpoint after verified Fly terminal deployment).
 
+Historical technical handoff: current 2026-10-18 native extension status is in
+[state.md](state.md). The native foundation is committed at `5f254629`; follow
+canonical `docs/extension_plan.md` and `docs/extensions/AGENT_GUIDE.md` for
+extension authoring. Do not treat the hosted evidence below as a current
+deployment check or proof that extension execution/rendering exists.
+
+The latest 2026-10-18 checkpoint now includes explicitly approved trusted-local
+execution and Menu rendering (#33). See `state.md` and decision D006 for the
+verified scope and non-sandbox boundary; the October 10 material below remains
+historical hosted/installation evidence.
+
 Project ID: `hosaka-context`. Start with [brief.md](brief.md),
 [state.md](state.md), and [tasks.jsonl](tasks.jsonl). Those own scope, current
 handoff and task status; this document preserves detailed technical evidence
