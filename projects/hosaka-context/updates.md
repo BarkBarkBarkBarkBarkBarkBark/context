@@ -103,3 +103,11 @@
 - Removed all disposable UI/schema fixtures and harness. Native API stayed 200
   with zero enabled packages. Final hub validation passed:
   `Valid: 12 projects, 39 tasks`; tracked progress is recorded on issue 33.
+
+## 2026-10-25T15:05:00-07:00 | hosaka-citations | Citations record split out
+
+- Changed: registered `hosaka-citations` for the independent extension. This
+  host record no longer says the Halloween package is unbuilt. Its external-proof
+  task stays open because Menu/TUI, local timezone, and core-integrity checks
+  were not rerun.
+- Evidence: see `projects/hosaka-citations/state.md`. No credentials copied.

@@ -13,6 +13,8 @@ Descriptions below are a readable index, not a second status board.
 | `agent-context` | This shared context hub and its maintenance workflow. | [State](projects/agent-context/state.md) |
 | `resumes-and-letters` | Neuroengineering job search, evidence-backed skills, GitHub project examples, and targeted applications. | [State](projects/resumes-and-letters/state.md) |
 | `hosaka-context` | Canonical Hosaka runtime, installers, Pi operations, and the isolated hosted terminal across three source repositories. | [State](projects/hosaka-context/state.md) |
+| `hosaka-citations` | Offline-first Halloween citations extension and its shared Supabase replica. | [State](projects/hosaka-citations/state.md) |
+| `virgo-zone` | LAN party server hosting the citations wall of shame, its Hosaka plugin, and the citations.hosaka.xyz scaffold. | [State](projects/virgo-zone/state.md) |
 | `realtime-sorting` | Umbrella for the neural recording and sorting experiments in the current workspace. | [State](projects/realtime-sorting/state.md) |
 | `realtime-sorter-mvp` | Kafka/Flink buffering and NumPy spike-detection pipeline, per its README. | [State](projects/realtime-sorter-mvp/state.md) |
 | `synth-mvp` | Synthetic WebSocket signal producer, relay, and Streamlit viewer. | [State](projects/synth-mvp/state.md) |

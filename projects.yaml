@@ -6,6 +6,27 @@ projects:
     status: active
     parent: null
     links: []
+  - id: hosaka-citations
+    name: Hosaka Citations
+    description: Offline-first Halloween citations extension with optional Supabase record sync.
+    status: active
+    parent: null
+    links:
+      - type: uses
+        target: hosaka-context
+        reason: Runs as trusted-local extension halloween-citations on the generic Hosaka host. The host does not own this application's schema or data.
+  - id: virgo-zone
+    name: VirgoZone
+    description: LAN party server hosting the citations wall of shame, with a read-only Hosaka plugin and a hosted-deployment scaffold.
+    status: active
+    parent: null
+    links:
+      - type: uses
+        target: hosaka-citations
+        reason: Imports the extension's stdlib citations package from a checkout and syncs its own replica to the same Supabase workspace as another device.
+      - type: uses
+        target: hosaka-context
+        reason: Ships hosaka-extension/ (id virgo-zone) under the Hosaka extension contract v1; reads the running VirgoZone server over loopback.
   - id: agent-context
     name: Agent Context
     description: Cross-project context, tasks, decisions, and handoffs.

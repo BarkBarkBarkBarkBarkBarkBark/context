@@ -110,15 +110,11 @@ Documentation validation result is recorded in [updates.md](updates.md).
 
 ## Next Action
 
-Next build the independent Halloween citation package using the published guide
-and `hosaka extensions create halloween-citations --path PATH`. Implement reason
-inputs/templates, explicit local timezone and JSON/text receipts through its data
-context; validate and test without editing core. Ask the owner to inspect/approve
-its digest/storage grant and enable it, then check CLI/TUI/Menu output and
-unchanged core git status. Keep printing optional/unimplemented until a real
-core capability exists. Dedicated PicoClaw tools and enforced Linux isolation
-have separate tasks; do not claim them from trusted-local proof.
-Do not automatically migrate credentials or run untrusted package tests.
+The independent citations package now has its own record, `hosaka-citations`.
+Do not scaffold it again. Resume from that project's state. Menu/TUI proof,
+local-timezone acceptance, and core-integrity checks for
+`hosaka-context:extension-external-proof` are still open. Dedicated PicoClaw
+tools and enforced Linux isolation remain separate tasks.
 
 Keep the independent operational follow-ups below:
 
