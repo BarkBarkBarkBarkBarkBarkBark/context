@@ -10,9 +10,12 @@ workspace.
 
 ## Scope And Non-Goals
 
-This record covers the independent `halloween-citations` extension: local
-SQLite, optional record sync, and private evidence metadata. It does not cover
-Hosaka core, the hosted terminal, or a second Supabase project.
+This record covers the independent `citations` extension (renamed from
+`halloween-citations`): local SQLite (`extension-data/citations/citations.db`),
+optional Supabase record sync, private evidence metadata, portable `cite` and
+`citations-setup` CLI commands, the local mobile web app (`web/local/` at
+`/citations/`), and the hosted read-only Vercel wall (`apps/hosted-wall/` at
+`https://citations.hosaka.xyz`).
 
 Schema isolation on `main` (`hosaka_citations` schema and
 `hosaka_citations_owner`) is required for this backend. Older clients that call
@@ -22,15 +25,16 @@ Schema isolation on `main` (`hosaka_citations` schema and
 
 - Source instructions in the citations repository govern implementation. This
   hub does not override them.
-- SQLite is the write target. Sync pushes and pulls rows. Do not upload or
-  replace the SQLite file, and do not delete the database, outbox, or conflicts
-  to clear an error.
-- Client credentials are the publishable key plus a user session. Never put a
-  service-role key, database password, or session token in this hub, git, or
-  action parameters.
+- SQLite (`extension-data/citations/citations.db`) is the single local write
+  target. Sync pushes and pulls rows. Do not upload or replace the SQLite file,
+  and do not delete the database, outbox, or conflicts to clear an error.
+- Client credentials are the publishable key plus a user session (or
+  `SUPABASE_READER_EMAIL` / `SUPABASE_READER_PASSWORD` in Vercel Production for
+  self-healing hosted wall sessions). Never put a service-role key, database
+  password, or session token in this hub, git, or action parameters.
 - Trust, enablement, and grants require an explicit owner action. Re-approve
-  the package digest after source changes. Trusted-local is not a sandbox.
-- Extension id and data directory stay `halloween-citations`.
+  the package digest after source changes (or via `hosaka extensions update --all --reapprove-trusted` during `hosaka update`). Trusted-local is not a sandbox.
+- Extension id and data directory are `citations` (`extension-data/citations/citations.db`).
 
 ## Sources And Entry Points
 

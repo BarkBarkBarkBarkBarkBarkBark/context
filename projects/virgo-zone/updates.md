@@ -17,3 +17,9 @@
 - Changed: new sibling project `citations-gate` (Next.js 16 Edge proxy: access-code cookie, rewrite to `CITATIONS_ORIGIN`, forwards `X-Gate-Token`). VirgoZone gained `CITATIONS_GATE_TOKEN` enforcement on `/citations` and `/api/citations/*` for non-loopback clients (test added). Scaffold doc updated with the GoDaddy record.
 - Evidence: `vercel deploy --prod` Ready; production smoke test passed; local gate → VirgoZone proxy returned the wall page and 4 wall rows. `citations.hosaka.xyz` attached and verified on the project. Access code and gate token stored only in `~/.hosaka/citations-gate.env` (0600) and Vercel sensitive env.
 - Next: owner adds the CNAME at GoDaddy; expose VirgoZone on a public HTTPS origin; set `CITATIONS_ORIGIN`; redeploy.
+
+## 2026-11-01T18:20:00-08:00 | virgo-zone:commit-citations-work | Gateway integration, single-DB consolidation, and mobile fixes pushed
+
+- Changed: moved contract to `extension/` and web app to `web/local/`; added `virgozone-start` launcher and `install.sh`; consolidated database into `~/.hosaka/extension-data/virgo-zone/virgo-zone.db` and shared `~/.hosaka/extension-data/citations/citations.db` (removing duplicate `virgo_zone/data/`); fixed mobile `.panel` visibility and ordering on `/virgo-zone/citations`.
+- Evidence: 49/49 pytest tests pass; verified live in integrated browser on `http://127.0.0.1:8086/virgo-zone/`; pushed to `origin/main`.
+- Next: run `hosaka update` on edge hardware.

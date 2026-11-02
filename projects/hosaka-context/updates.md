@@ -111,3 +111,9 @@
   task stays open because Menu/TUI, local timezone, and core-integrity checks
   were not rerun.
 - Evidence: see `projects/hosaka-citations/state.md`. No credentials copied.
+
+## 2026-11-01T18:20:00-08:00 | hosaka-context:extension-external-proof | Web capability, automatic extension updater, and Menu button shield
+
+- Changed: added optional `web` contribution and `web:self` grant (`--allow-web --web-source --web-python`), bounded JSON Schema LRU cache and C-accelerated UniqueLoader YAML validation, `hosaka extensions update [id|--all] [--reapprove-trusted]` integrated into `hosaka update` and `update-deck.sh`, and a transparent `::after` hit shield + `user-select: none` + `z-index` layering on `.terminal-gui button` / `.deck-menu` so clicking Menu and its buttons (`Games`, `Wi-Fi`, `Bluetooth`, `Flash`, `Extensions`) never selects text or gets intercepted by the xterm TUI layer.
+- Evidence: 261 pytest tests in `tests/extensions`, `tests/test_paths.py`, and `tests/test_update_deployment.py` pass; `npm run build:check` in `frontend/` passes; verified live in the integrated browser.
+- Next: run `hosaka update` on Raspberry Pi edge hardware.

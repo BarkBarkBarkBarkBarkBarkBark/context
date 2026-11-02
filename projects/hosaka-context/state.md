@@ -1,12 +1,15 @@
 # Hosaka: Current State
 
-Last checkpoint: 2026-10-18
-Verification: 379 focused tests, real worker/API/browser checks and approved local backend restart; no hardware/public deployment claim
-Current milestone: trusted-local extension execution and declarative Menu views implemented locally
+Last checkpoint: 2026-11-01T18:20:00-08:00
+Verification: 261 focused extension/path/update tests, frontend `npm run build:check`, and live browser checks passed
+Current milestone: web capability grants, automatic extension updater (`hosaka extensions update --all`), and Menu button transparent shield live on `main`
 
-## Current Native Extension Work
+## Current Native Extension & Gateway Work
 
-- The former uncommitted foundation is now committed as `5f254629` on `dev`:
+- Added `web` manifest contribution and `web:self` grant (`--allow-web --web-source --web-python`) for `hosaka-gateway`.
+- Added `hosaka extensions update [ID] [--all] [--reapprove-trusted]` in `hosaka/extensions/manager.py`, integrated into `hosaka update` and `scripts/update-deck.sh` so edge devices pull and initialize all extensions and their `.db` migrations automatically.
+- Added transparent `::after` hit shield (`position: absolute; inset: 0; z-index: 2`), `user-select: none`, and `z-index` layering to `.terminal-gui button`, `.deck-bar`, and `.deck-menu` so clicking `Menu`, `Games`, `Wi-Fi`, `Bluetooth`, `Flash`, and `Extensions` never selects text or gets intercepted by the xterm TUI canvas.
+- Former uncommitted foundation is committed on `main`:
   shared native paths, installation records, path/offline diagnostics, read-only
   ownership inventory and preserved TUI + Menu boot/update behavior.
 - Reconciled the newly supplied `docs/extension_plan.md` with the actual code.
